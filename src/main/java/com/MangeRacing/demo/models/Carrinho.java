@@ -2,7 +2,10 @@ package com.MangeRacing.demo.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -11,6 +14,9 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "carrinho")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Carrinho {
 
     @Id
@@ -38,4 +44,18 @@ public class Carrinho {
     private LocalDateTime createdDate;
 
 
+    public void setFrente(UUID id) {
+    }
+
+    public void setMotor(UUID id) {
+    }
+
+    public void setRodaFrente(UUID id) {
+    }
+
+    public void setRodaTraseira(UUID id) {
+    }
+
+    public void setUser(UUID id) {
+    }
 }
